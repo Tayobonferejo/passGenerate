@@ -14,104 +14,138 @@ body {
     height: 100vh;
   }
 
-  main {
-    width: 380px;
-  }
+main {
+  width: 380px;
+}
 
-  .slider-container {
-    background: #2a2a2a;
-    border-radius: 5px;
-    width: 100%;
-    padding: 2rem;
-  }
+.slider-container {
+  background: #2a2a2a;
+  border-radius: 5px;
+  width: 100%;
+  padding: 2rem;
+}
 
-  .label-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #cfcfcf;
-  }
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #cfcfcf;
+}
 
-  .label-row span.value {
-    color: #00ffaa;
-    font-weight: bold;
-    font-size: 16px;
-  }
+.label-row span.value {
+  color: #00ffaa;
+  font-weight: bold;
+  font-size: 16px;
+}
 
-  form {
-    margin: 2rem 0;
-  }
+form {
+  margin: 2rem 0;
+}
 
-  form > div {
-    padding: 0.5rem 0;
-  }
+form > div {
+  padding: 0.5rem 0;
+}
 
-  button {
-    background-color: orange;
-    width: 100%;
-    height: 50px;
-    border: none
-  }
+#button {
+  background-color: orange;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 2rem;
+}
 
-  #passgen {
-    background-color:#2a2a2a;;
-    border: none;
-    height: 40px;
-    width: 100%;
-    border-radius: 5px;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    font-size: large;
-  }
+#button:hover {
+  background-color: rgb(38, 0, 255);
+  color: aliceblue;
+} 
 
-  input[type="range"] {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 5px;
-    background: #141414;
-    border-radius: 10px;
-    outline: none;
-  }
+button {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: large;
+  font-weight: lighter;
+}
 
-  /* Track (background line) */
-  input[type="range"]::-webkit-slider-runnable-track {
-    height: 5px;
-    background: #141414;
-    border-radius: 10px;
-  }
+#container {
+ position: relative;
+ margin-bottom: 1rem;
+ height: 100%;
+ width: 100%;
+}
 
-  input[type="range"]::-moz-range-track {
-    height: 5px;
-    background: #141414;
-    border-radius: 10px;
-  }
+.fa-copy {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 
-  /* Filled portion (before the thumb) */
-  input[type="range"]::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #00ffaa var(--value, 0%), #141414 var(--value, 0%));
-  }
+.fa-solid {
+  position: absolute;
+  top: 15px;
+  right: 80px;
+  color: black
+}
 
-  /* Thumb (the circle) */
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #ffffff;
-    border-radius: 50%;
-    margin-top: -7.5px; /* Center thumb vertically */
-    cursor: pointer;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  }
+#passgen {
+  background-color:#2a2a2a;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: large;
+}
 
-  input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  }
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #141414;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* Track (background line) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #141414;
+  border-radius: 10px;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 5px;
+  background: #141414;
+  border-radius: 10px;
+}
+
+/* Filled portion (before the thumb) */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #00ffaa var(--value, 0%), #141414 var(--value, 0%));
+}
+
+/* Thumb (the circle) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-top: -7.5px; /* Center thumb vertically */
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
 

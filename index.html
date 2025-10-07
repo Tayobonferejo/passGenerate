@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Clickable Progress Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 <body>
     <main>
-        <div id ="container">
-            <input type="text" placeholder="password generator" id="passgen">
+        <div id="container">
+            <input type="text" placeholder="password generator" id="passgen"><i class="fa-regular fa-copy"></i>
         </div>
         <section class="slider-container">
             <div>
@@ -38,8 +39,9 @@
                     <input type="checkbox" value="symbols" id="sym"> 
                     <label>Include Symbols</label>
                 </div>
-
-                <button type="submit">GENERATE-></button>
+                <div id="button">
+                    <button type="submit">GENERATE</button><i class="fa-solid fa-arrow-right"></i>
+                </div>
             </form>
         </section>
 
