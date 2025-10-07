@@ -1,5 +1,6 @@
 const slider = document.getElementById('lengthSlider');
 const sliderValue = document.getElementById('sliderValue');
+const myForm = document.getElementById('myForm');
 
 function updateSlider() {
   const val = slider.value;
@@ -10,3 +11,9 @@ function updateSlider() {
 
 slider.addEventListener('input', updateSlider);
 updateSlider();
+
+
+myForm.addEventListener("submit", function(event){
+  event.preventDefault();
+  
+});
