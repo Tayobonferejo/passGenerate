@@ -8,37 +8,42 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <section class="slider-container">
-        <div>
-            <div class="label-row">
-            <span>Character Length</span>
-            <span class="value" id="sliderValue">0</span>
-            </div>
-            <input type="range" id="lengthSlider" min="0" max="100" value="0">
+    <main>
+        <div id ="container">
+            <input type="text" placeholder="password generator" id="passgen">
         </div>
-
-        <form id="myForm">
+        <section class="slider-container">
             <div>
-                <input type="checkbox" value="uppercase" id="upper"> 
-                <label>Include Uppercase Letters</label>
-            </div>
-            <div>
-                <input type="checkbox" value="lowercase" id="lower"> 
-                <label>Include Lowercase Letters</label>
-            </div>
-            <div>
-                <input type="checkbox" value="number" id="num"> 
-                <label>Include Number</label>
-            </div>
-            <div>
-                <input type="checkbox" value="symbols" id="sym"> 
-                <label>Include Symbols</label>
+                <div class="label-row">
+                <span>Character Length</span>
+                <span class="value" id="sliderValue">0</span>
+                </div>
+                <input type="range" id="lengthSlider" min="0" max="100" value="0">
             </div>
 
-            <button type="submit">GENERATE-></button>
-        </form>
-    </section>
+            <form id="myForm" action="mysubmit.php" method="post">
+                <div>
+                    <input type="checkbox" value="uppercase" id="upper"> 
+                    <label>Include Uppercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="lowercase" id="lower"> 
+                    <label>Include Lowercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="number" id="num"> 
+                    <label>Include Number</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="symbols" id="sym"> 
+                    <label>Include Symbols</label>
+                </div>
 
+                <button type="submit">GENERATE-></button>
+            </form>
+        </section>
+
+    </main>
 </body>
 </html>
 
