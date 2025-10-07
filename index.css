@@ -48,6 +48,10 @@ form > div {
   padding: 0.5rem 0;
 }
 
+label {
+  margin-left: 5px;
+}
+
 #button {
   background-color: orange;
   position: relative;
@@ -58,7 +62,6 @@ form > div {
 
 #button:hover {
   background-color: rgb(38, 0, 255);
-  color: aliceblue;
 } 
 
 button {
@@ -99,6 +102,7 @@ button {
   padding: 1rem;
   font-size: large;
 }
+
 
 input[type="range"] {
   -webkit-appearance: none;
