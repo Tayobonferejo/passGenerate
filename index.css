@@ -1,0 +1,80 @@
+body {
+    background: #1a1a1a;
+    color: #d0d0d0;
+    font-family: "Inter", sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .slider-container {
+    background: #2a2a2a;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 320px;
+  }
+
+  .label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #cfcfcf;
+  }
+
+  .label-row span.value {
+    color: #00ffaa;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #141414;
+    border-radius: 10px;
+    outline: none;
+  }
+
+  /* Track (background line) */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: #141414;
+    border-radius: 10px;
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: 5px;
+    background: #141414;
+    border-radius: 10px;
+  }
+
+  /* Filled portion (before the thumb) */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #00ffaa var(--value, 0%), #141414 var(--value, 0%));
+  }
+
+  /* Thumb (the circle) */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-top: -7.5px; /* Center thumb vertically */
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  }

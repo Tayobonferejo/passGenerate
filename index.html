@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clickable Progress Bar</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <section>
+        <div class="slider-container">
+            <div class="label-row">
+            <span>Character Length</span>
+            <span class="value" id="sliderValue">0</span>
+            </div>
+            <input type="range" id="lengthSlider" min="0" max="100" value="0">
+        </div>
+
+        <form>
+            <h2>Character Length</h2>
+
+            <input type="checkbox" value="uppercase"> 
+            <label>Include Uppercase Letters</label>
+            <input type="checkbox" value="lowercase"> 
+            <label>Include Lowercase Letters</label>
+            <input type="checkbox" value="number"> 
+            <label>Include Number</label>
+            <input type="checkbox" value="symbols"> 
+            <label>Include Symbols</label>
+        </form>
+    </section>
+
+</body>
+</html>
+
+
