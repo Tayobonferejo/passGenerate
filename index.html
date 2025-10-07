@@ -8,8 +8,8 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <section>
-        <div class="slider-container">
+    <section class="slider-container">
+        <div>
             <div class="label-row">
             <span>Character Length</span>
             <span class="value" id="sliderValue">0</span>
@@ -18,16 +18,24 @@
         </div>
 
         <form>
-            <h2>Character Length</h2>
+            <div>
+                <input type="checkbox" value="uppercase"> 
+                <label>Include Uppercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" value="lowercase"> 
+                <label>Include Lowercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" value="number"> 
+                <label>Include Number</label>
+            </div>
+            <div>
+                <input type="checkbox" value="symbols"> 
+                <label>Include Symbols</label>
+            </div>
 
-            <input type="checkbox" value="uppercase"> 
-            <label>Include Uppercase Letters</label>
-            <input type="checkbox" value="lowercase"> 
-            <label>Include Lowercase Letters</label>
-            <input type="checkbox" value="number"> 
-            <label>Include Number</label>
-            <input type="checkbox" value="symbols"> 
-            <label>Include Symbols</label>
+            <button>GENERATE-></button>
         </form>
     </section>
 
