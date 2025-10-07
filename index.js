@@ -21,18 +21,17 @@ updateSlider();
 
 myForm.addEventListener("submit", function(event){
   event.preventDefault();
-  if(upper.checked){
-    console.log(upper.value);
+  if(upper.checked && lower.checked && number.checked && symbol.checked){
   }
-  if(lower.checked){
-    console.log(lower.value);
+  else if(upper.checked && lower.checked && number.checked ){
   }
-  if(number.checked){
-    console.log(number.value);
+  else if(upper.checked && number.checked && symbol.checked){
   }
-  if(symbol.checked){
-    console.log(symbol.value);
+  else if(upper.checked && lower.checked && symbol.checked ){
   }
+  else if(lower.checked && number.checked && symbol.checked){
+  }
+
 
   myForm.reset();
 
