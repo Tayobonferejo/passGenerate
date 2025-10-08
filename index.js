@@ -2,6 +2,7 @@ const slider = document.getElementById('lengthSlider');
 const sliderValue = document.getElementById('sliderValue');
 const myForm = document.getElementById('myForm');
 const upper = document.getElementById('upper');
+const passgen = document.getElementById('passgen');
 const lower = document.getElementById('lower');
 const symbol = document.getElementById('sym');
 const number = document.getElementById('num');
@@ -51,8 +52,11 @@ myForm.addEventListener("submit", function(event) {
     password += charset[randomIndex];
   }
 
-  console.log("Generated Password:", password);
   alert(`Your password is: ${password}`);
+
+  passgen.value = password;
+
+  console.log(passgen.value);
 
   myForm.reset();
 });
