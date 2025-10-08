@@ -19,20 +19,40 @@ slider.addEventListener('input', updateSlider);
 updateSlider();
 
 
-myForm.addEventListener("submit", function(event){
+myForm.addEventListener("submit", function(event) {
   event.preventDefault();
-  if(upper.checked && lower.checked && number.checked && symbol.checked){
-  }
-  else if(upper.checked && lower.checked && number.checked ){
-  }
-  else if(upper.checked && number.checked && symbol.checked){
-  }
-  else if(upper.checked && lower.checked && symbol.checked ){
-  }
-  else if(lower.checked && number.checked && symbol.checked){
+
+  let charset = "";
+  const passwordLength = parseInt(document.getElementById("lengthSlider").value);
+  if (upper.checked) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  if (lower.checked) charset += "abcdefghijklmnopqrstuvwxyz";
+  if (number.checked) charset += "0123456789";
+  if (symbol.checked) charset += "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+  if (charset.length === 0 &&  passwordLength == 0) {
+    alert("Please select at least one option! and the password length" );
+    return;
   }
 
+  else if (charset.length === 0) {
+    alert("Please select at least one option!" );
+    return;
+  }
+
+  else if (passwordLength == 0) {
+    alert("Please select the password length" );
+    return;
+  }
+
+  let password = "";
+
+  for (let i = 0; i < passwordLength; i++) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset[randomIndex];
+  }
+
+  console.log("Generated Password:", password);
+  alert(`Your password is: ${password}`);
 
   myForm.reset();
-
 });
