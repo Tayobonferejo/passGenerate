@@ -57,8 +57,6 @@ myForm.addEventListener("submit", function(event) {
 
   passgen.value = password;
 
-  console.log(passgen.value);
-
   myForm.reset();
 });
 
