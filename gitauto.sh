@@ -21,7 +21,7 @@ git add .
 
 # 💬 4. Commit with message and timestamp
 timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-git commit -m "$1 — $timestamp"
+git commit -m "$1"
 
 # 🚀 5. Push to the current branch
 git push origin "$branch"
