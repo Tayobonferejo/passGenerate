@@ -1,6 +1,7 @@
 const slider = document.getElementById('lengthSlider');
 const sliderValue = document.getElementById('sliderValue');
 const myForm = document.getElementById('myForm');
+const copyBtn = document.getElementById('copyBtn');
 const upper = document.getElementById('upper');
 const passgen = document.getElementById('passgen');
 const lower = document.getElementById('lower');
@@ -59,4 +60,17 @@ myForm.addEventListener("submit", function(event) {
   console.log(passgen.value);
 
   myForm.reset();
+});
+
+
+// ====== COPY PASSWORD BUTTON ======
+copyBtn.addEventListener("click", () => {
+  if (!passgen.value) {
+    alert("Nothing to copy — please generate a password first!");
+    return;
+  }
+
+  navigator.clipboard.writeText(passgen.value)
+    .then(() => alert("✅ Password copied to clipboard!"))
+    .catch(() => alert("❌ Failed to copy!"));
 });
